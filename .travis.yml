@@ -1,6 +1,16 @@
 language: node_js
 node_js:
-  - "6"
+  - '6'
+
+branches:
+  only:
+    - 'master'
+
+env:
+  global:
+    - secure: SbydXfrdjI05X61uh4M8+M5YHesEwjCuzRQuBV1mSgLUUwzRXaVc++VbWQvrRMNLXn+p/ZpkhWYvNSb4RpkBLLpRJ/SG4Wh7HS7+n1lurkDf3bzpGAKPgaJss7e39XswwHbguHCoPJDShLX85rC+9sD9Pkr2StzibRE4cm9D+/proYDkPxCvgMOlXH3Gi7kb4K3zPUnl00S4MwEetL8EmyPCccW98hG/nHvBt6gfWkbf5eAW9AmuyHueSwPSyjPTR4PyZV1FkwhCie0Ov/2QEg4X2cYTX3cs0ZLyRTB6yuCdK6dsA70Vc8WfbvM1JH7dVedxs07g1p0983CRKpa49UzlwDf/X8ZDuVvXJ+HhI2SUKVZMEqluo8hzO9b3ENuQKAhBb7WyxIljFOG8hiZbtMGRk9KQTwSaMy0TFtzOaD+sa0T/pEryM9b9srsJRXULyRD0r0W0+EDVIfpzx3eJA9Xb+RVwh1YeKyLy06DR4AtRxBguJJZEbN0tXMGz6IeukD2ABx46iVgrwtB0t9cVPkK0Bwn/ZjI5YepcGehcVC41XU3INPk67eM0ScLaCqRdCZvQTLKImyTycYUkV/MdhCGxncA5HlwzFDIVuSy49bQ89W+8zO7UHPNQU8NAxgdQRwbipUPtJRWmBuQ59uR3HtOZa64XPHTyn5zUq+dhsQs=
+    - COMMIT_AUTHOR_EMAIL: "noda@free.fr"
 
 script:
   - npm run lint
+  - ./deploy.sh
